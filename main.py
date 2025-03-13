@@ -1,36 +1,26 @@
-from ultralytics import YOLO  # type: ignore
-import cv2
+from ultralytics import YOLO # type: ignore
+import cv2 # type: ignore
 
-# Train model 
-"""model = YOLO("yolo11n-cls.pt")
+model_path = "/home/dang-minh-nguyen/Repositories/Scissors Paper Rock YOLO 2/runs/detect/train3/weights/best.onnx"
 
-# Train YOLO Modell with a sepecific dataset
+model = YOLO(model_path)
+cap = cv2.VideoCapture(0)
 
-path_dataset = "/home/dang-minh-nguyen/Repositories/Scissors Paper Rock YOLO 2/Rock-Paper-Scissors-1"
-results = model.train(data=path_dataset, epochs=10, imgsz=640)"""
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        print("Failed to grab frame.")
+        break  
 
-# Load the trained model from model runs folder
-best_model_path = "/home/dang-minh-nguyen/Repositories/Scissors Paper Rock YOLO 2/runs/classify/train/weights/best.pt"
+    results = model(frame)
+    result = results[0]
 
+    annotated_frame = result.plot() 
+    cv2.imshow('YOLO Inference', annotated_frame)
+    
+    # ASCII Code of Esc
+    if cv2.waitKey(1) == 27: 
+        break
 
-
-model = YOLO(best_model_path)
-
-test_scissors_path = "/home/dang-minh-nguyen/Repositories/Scissors Paper Rock YOLO 2/test/scissor_test.jpg"
-test_rock_path = "/home/dang-minh-nguyen/Repositories/Scissors Paper Rock YOLO 2/test/rock.jpeg"
-test_paper_path = "/home/dang-minh-nguyen/Repositories/Scissors Paper Rock YOLO 2/test/paper.jpg"
-
-# Predict test
-test_image_path = test_paper_path
-
-results = model(test_image_path)
-
-# Display test image
-original_img = cv2.imread(test_image_path)
-
-cv2.imshow("Test Image", original_img)
-
-cv2.waitKey(0)
-
+cap.release()
 cv2.destroyAllWindows()
-

@@ -31,3 +31,14 @@
     # Predict test
     test_image_path = test_paper_path
 ```
+
+## Results
+
+- Sample Result:
+
+```bash
+    image 1/1 /home/dang-minh-nguyen/Repositories/Scissors Paper Rock YOLO 2/test/paper.jpg: 640x640 paper 0.59, scissors 0.38, rock 0.03, 61.7ms
+    Speed: 26.7ms preprocess, 61.7ms inference, 0.0ms postprocess per image at shape (1, 3, 640, 640)
+```
+
+- This is the predicted probability, look at the predicted rate of the image, the class with the highest predicted probability will be the selected class

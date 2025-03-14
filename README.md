@@ -46,6 +46,7 @@
 ## Update
 
 - Using new Model with 20 epochs, which was trained in Colab using TGPU. It has much better accurraccy than version in local ipynb with 10 epochs
+- View COLAB_Updated_Model.ipynb to see more detail
 
 ## Sample Images
 

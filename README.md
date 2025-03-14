@@ -43,6 +43,10 @@
 
 - If you use only the trained model, just run the python file. Run the notebook is not necessary in this case
 
+## Update
+
+- Using new Model with 20 epochs, which was trained in Colab using TGPU. It has much better accurraccy than version in local ipynb with 10 epochs
+
 ## Sample Images
 
 ![alt text](image.png)

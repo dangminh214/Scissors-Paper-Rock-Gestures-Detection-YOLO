@@ -1,7 +1,7 @@
 from ultralytics import YOLO  # type: ignore
 import cv2  # type: ignore
 
-model_path = "./runs/detect/train3/weights/best.onnx"
+model_path = "./runs/detect/train7/weights/best.onnx"
 
 model = YOLO(model_path)
 cap = cv2.VideoCapture(0)

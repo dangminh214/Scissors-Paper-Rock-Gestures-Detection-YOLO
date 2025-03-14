@@ -9,6 +9,12 @@
     pip install -r requirements.txt
 ```
 
+- Optional: Uncomment all pip install lines in notebook instead of using requirements.txt
+
+```bash
+    %pip install ...
+```
+
 ## Files Details
 
 ### notebook.ipynb
@@ -25,8 +31,19 @@
     python main.py
 ```
 
+## Usage
+
+- First, run the notebook to export trained model as best.onnx file
+- Secondly, run the main.py
+
+```bash
+    python main.py
+```
+
+- If you use only the trained model, just run the python file. Run the notebook is not necessary in this case
+
 ## Sample Images
 
 ![alt text](image.png)
 ![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](image-3.png)

@@ -8,8 +8,8 @@ cap = cv2.VideoCapture(0)
 
 # Display Window setup
 WINDOW_NAME = "YOLO Inference"
-cv2.namedWindow(WINDOW_NAME, cv2.WINDOW_NORMAL)  # Cho phép thay đổi kích thước
-cv2.resizeWindow(WINDOW_NAME, 1280, 720)  # Đặt kích thước mong muốn
+cv2.namedWindow(WINDOW_NAME, cv2.WINDOW_NORMAL)  
+cv2.resizeWindow(WINDOW_NAME, 1280, 720)  
 
 while True:
     ret, frame = cap.read()

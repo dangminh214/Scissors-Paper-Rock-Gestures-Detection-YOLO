@@ -9,6 +9,7 @@
     pip install -r requirements.txt
 ```
 
+- Recommend to create an enviroment for this repository to install all requirements
 - Optional: Uncomment all pip install lines in notebook instead of using requirements.txt
 
 ```bash

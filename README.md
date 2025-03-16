@@ -37,9 +37,12 @@
 - First, run the notebook to export trained model as best.onnx file
 - Secondly, run the main.py
 
-```bash
-    python main.py
-```
+    ```bash
+        python main.py
+    ```
+
+- Optional (reommend): Run webcam using notebook:
+  - Run webcam.ipyb
 
 - If you use only the trained model, just run the python file. Run the notebook is not necessary in this case
 
